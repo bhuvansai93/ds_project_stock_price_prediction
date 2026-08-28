@@ -116,6 +116,7 @@ The preprocessing workflow includes:
 -   Checking data quality and missing values
 -   Creating the next-day target
 -   Removing observations without a target
+-   Saving the cleaned datasets to `cleaned_datasets/`
 
 ------------------------------------------------------------------------
 
@@ -536,6 +537,14 @@ ds_project_stock-price-prediction/
 │   ├── Maruti.csv
 │   └── Sun_Pharma.csv
 │
+├── cleaned_datasets/
+│   ├── Reliance.csv
+│   ├── Infosys.csv
+│   ├── HDFC_Bank.csv
+│   ├── Maruti.csv
+│   └── Sun_Pharma.csv
+│
+├── requirements.txt
 └── other project files
 ```
 
@@ -553,20 +562,50 @@ ds_project_stock-price-prediction/
 -   TensorFlow / Keras
 -   Keras Tuner
 
+The exact package versions used in the project are provided in
+`requirements.txt`.
+
 ------------------------------------------------------------------------
 
 # How to Run
 
-1.  Clone the repository.
-2.  Install the required Python packages.
-3.  Place the required stock CSV files in the expected dataset
-    directory.
-4.  Open `final_stock_code.ipynb`.
-5.  Run the notebook from the beginning.
+1. Clone the repository.
+2. Create and activate a Python environment.
+3. Install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Place the raw stock CSV files in the `Datasets10/` directory.
+5. Open `final_stock_code.ipynb` in Jupyter Notebook or JupyterLab.
+6. Run the notebook from the beginning.
 
 The notebook performs data preparation, exploratory analysis, model
 training, hyperparameter optimisation, evaluation, model comparison and
 supplementary analysis.
+
+During preprocessing, the cleaned datasets are saved in the
+`cleaned_datasets/` directory.
+
+------------------------------------------------------------------------
+
+# Requirements
+
+The project uses the following Python packages and versions:
+
+```text
+numpy==2.2.6
+pandas==2.3.3
+matplotlib==3.10.6
+scikit-learn==1.7.2
+scipy==1.16.2
+xgboost==3.1.1
+tensorflow==2.21.0
+keras-tuner==1.4.8
+```
+
+These dependencies are also listed in `requirements.txt`.
 
 ------------------------------------------------------------------------
 
