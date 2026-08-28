@@ -42,7 +42,7 @@ rule requiring no learned model.
 
 ## Project Objectives
 
-1.  Build a leak-free next-day regression pipeline using raw OHLCV data
+1.  Build a leak-free next-day regression pipeline using raw OHLCV(Open, High, Low, Close, Volume) data
     for five Indian stocks from five sectors.
 2.  Use a strictly chronological train-test split.
 3.  Train and optimise a linear model, two tree ensembles and two
@@ -478,9 +478,6 @@ Future work could:
     test whether model rankings change.
 4.  Use walk-forward validation to better represent repeated forecasting
     conditions.
-5.  Evaluate deep-learning models over multiple seeds and report
-    distributions of performance.
-
 ------------------------------------------------------------------------
 
 # Project Workflow
@@ -528,7 +525,7 @@ Conclusions
 # Repository Structure
 
 ``` text
-stock-price-prediction/
+ds_project_stock-price-prediction/
 │
 ├── final_stock_code.ipynb
 ├── README.md
